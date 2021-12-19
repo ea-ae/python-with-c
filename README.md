@@ -1,4 +1,4 @@
 # Python with C
 
-Just an attempt at writing various C/C++ extensions for Python.
-If you for some reason wish to compile this with VS, be sure to look over the settings, especially the Python include/ and libs/ directory paths.
+Just a learning attempt at writing C++ extensions and using C DLLs for Python.
+You should be able to compile this mess with VS2019 if for some reason you wish to, just look over the included directory settings.
