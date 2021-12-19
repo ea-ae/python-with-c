@@ -1,4 +1,4 @@
-[submodule "extern/pybind"]
-	path = extern/pybind
+[submodule "item/extern/pybind"]
+	path = item/extern/pybind
 	url = https://github.com/pybind/pybind11.git
 	branch = stable
