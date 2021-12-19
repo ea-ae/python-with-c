@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "python-with-c", "python-with-c.vcxproj", "{8E876A22-9BA2-47F0-8AE0-3F3CBB4AB6D5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "c-lib", "..\c-lib\c-lib.vcxproj", "{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -23,14 +21,6 @@ Global
 		{8E876A22-9BA2-47F0-8AE0-3F3CBB4AB6D5}.Release|x64.Build.0 = Release|x64
 		{8E876A22-9BA2-47F0-8AE0-3F3CBB4AB6D5}.Release|x86.ActiveCfg = Release|Win32
 		{8E876A22-9BA2-47F0-8AE0-3F3CBB4AB6D5}.Release|x86.Build.0 = Release|Win32
-		{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}.Debug|x64.ActiveCfg = Debug|x64
-		{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}.Debug|x64.Build.0 = Debug|x64
-		{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}.Debug|x86.ActiveCfg = Debug|Win32
-		{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}.Debug|x86.Build.0 = Debug|Win32
-		{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}.Release|x64.ActiveCfg = Release|x64
-		{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}.Release|x64.Build.0 = Release|x64
-		{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}.Release|x86.ActiveCfg = Release|Win32
-		{73EE588A-0F3D-4F7D-AC48-93FF8C7A2C98}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
