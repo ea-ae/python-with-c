@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     print('C pointer magic')
     buffer = ctypes.create_string_buffer(b'Hello world ho ho ho')
-    count = lib.remove_char(buffer, ord('o'), 3)
-    print(count)
-    print(buffer.raw)
-    print(buffer.value)
+    count = lib.remove_char(buffer, ord('o'), 3)  # remove first n instances of char from string
+    print(count)  # 3
+    print(buffer.raw)  # b'Hell wrld h ho ho\x00ho\x00'
+    print(buffer.value)  # b'Hell wrld h ho ho'
