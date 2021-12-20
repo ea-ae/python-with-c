@@ -4,9 +4,10 @@
 
 int remove_char(char text[], char symbol, int n) {
     // remove 'n' first instances of 'symbol' in 'text'
-    char* reader, *writer;
+    char *reader = text;
+    char *writer = text;
     int count = 0;
-    for (reader = text, writer = text; *reader != '\0'; reader++) {
+    for (; *reader != '\0'; reader++) {
         if (*reader== symbol && count < n) {
             count++;
             reader++;
@@ -14,9 +15,7 @@ int remove_char(char text[], char symbol, int n) {
         *writer = *reader;
         writer++;
     }
-    if (count > 0) {
-        *writer = '\0';
-    }
+    if (count > 0) *writer = '\0';
 
     return count;
 }
@@ -33,8 +32,8 @@ long long iterate(long long times) {
 }
 
 /*int main(int argc, char** argv) {
-    char text[] = "tererere";
-    remove_char(text, 'e', 2);
+    char text[] = "terererere";
+    remove_char(text, 'e', 3);
     printf("%s", text);
     return 0;
 }*/
