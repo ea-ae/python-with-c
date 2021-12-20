@@ -1,4 +1,10 @@
 #include "item.h"
+#include <tuple>
+
+// sys_call
+#include <cstdlib>
+
+using namespace py::literals;
 
 
 Item::Item(std::string name_) {
@@ -10,14 +16,26 @@ void Item::add(int i) {
 }
 
 
-int create(std::string name) {
+std::tuple<int, std::string> create(std::string name) {
 	static std::vector<Item> items;
 	items.push_back(Item(name));
-	return items.size();
+	return std::tuple<int, std::string>{items.size(), name};
+}
+
+int sys_call(std::string command) {
+	int res = system(command.c_str());
+	return res;
 }
 
 
 PYBIND11_MODULE(item, m) {
-	m.doc() = "Item is an example module.";
-	m.def("create", &create, "Create a new Item");
+	m.doc() = "Item is an example module";
+
+	m.def("create", &create, "Create a new Item", "name"_a = "default!");
+	m.def("sys_call", &sys_call, "Execute a system command", "command"_a);
+
+	py::class_<Item>(m, "Item")
+		.def(py::init<std::string>(), "Item initializer")
+		.def("add", &Item::add, "Add to value", "i"_a)
+		.def_readwrite("value", &Item::value, "Value");
 }
