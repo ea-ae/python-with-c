@@ -13,4 +13,5 @@ private:
 public:
 	Item(std::string name_);
 	void add(int i);
+	void subtract(int i);
 };

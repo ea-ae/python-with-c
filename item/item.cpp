@@ -1,7 +1,7 @@
 #include "item.h"
 #include <tuple>
 
-// sys_call
+// lib for sys_call
 #include <cstdlib>
 
 using namespace py::literals;
@@ -15,6 +15,10 @@ void Item::add(int i) {
 	value += i;
 }
 
+void Item::subtract(int i) {
+	value -= i;
+}
+
 
 std::tuple<int, std::string> create(std::string name) {
 	static std::vector<Item> items;
@@ -22,7 +26,7 @@ std::tuple<int, std::string> create(std::string name) {
 	return std::tuple<int, std::string>{items.size(), name};
 }
 
-int sys_call(std::string command) {
+int sys_call(std::string command) { // execute arbitrary cmd's (& potentially pipe into a file)
 	int res = system(command.c_str());
 	return res;
 }
